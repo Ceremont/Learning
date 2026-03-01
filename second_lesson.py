@@ -8,9 +8,9 @@ while True:
     except ValueError:
         print("ЧИСЛА")
         continue
-attempts += 1
+    attempts += 1
     if number == guess:
-        print("Браво,угадал")
+        print(f"Браво,угадал,{number}")
         break
     elif number < guess:
         print("Меньше")
