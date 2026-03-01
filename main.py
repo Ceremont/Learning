@@ -1,27 +1,34 @@
-name = input("give name:")
-age = int(input("give age:"))
+name = input("give name: ")
+age = int(input("give age: "))
+
 print(f"Привет, {name}, через год тебе будет {age + 1}")
-if age <= 18:
+
+if age < 18:
     print("Молодняк")
 else:
     print("Старик")
 
-# calc
+
+# calculator
 try:
-    liczba1 = int(input("give liczba 1:"))
-    liczba2 = int(input("give liczba 2:"))
+    liczba1 = int(input("give liczba 1: "))
+    liczba2 = int(input("give liczba 2: "))
 except ValueError:
-    print("Буквы,не цифры")
-choice = input("выбери действие калькулятора(+,-,*,/)")
-suma = liczba1 + liczba2
-minus = liczba1 - liczba2
-umnoz = liczba1 * liczba2
-dele = int (liczba1) / int (liczba2)
+    print("Буквы, не цифры")
+    exit()
+
+choice = input("выбери действие (+, -, *, /): ")
+
 if choice == "+":
-    print(suma)
+    print(liczba1 + liczba2)
 elif choice == "-":
-    print(minus)
+    print(liczba1 - liczba2)
 elif choice == "*":
-    print(umnoz)
+    print(liczba1 * liczba2)
 elif choice == "/":
-    print(dele)
+    if liczba2 == 0:
+        print("Деление на ноль нельзя")
+    else:
+        print(liczba1 / liczba2)
+else:
+    print("Неизвестная операция")
