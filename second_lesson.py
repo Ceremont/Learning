@@ -8,7 +8,7 @@ while True:
     except ValueError:
         print("ЧИСЛА")
         continue
-        attempts += 1
+attempts += 1
     if number == guess:
         print("Браво,угадал")
         break
