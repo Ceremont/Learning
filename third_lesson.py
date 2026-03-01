@@ -22,7 +22,7 @@ while True:
         try:
             index = int(input("Введите номер задачи: "))
             tasks.pop(index)
-        except ValueError:
+        except (ValueError, IndexError):
             print("Ошибка")
 
     elif choice == "4":
