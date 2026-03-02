@@ -24,6 +24,6 @@ def run_calculator():
     number1 = int(input("Enter a number: "))
     number2 = int(input("Enter another number: "))
     operation = input("Enter operation: ")
-    calculate(number1, number2, operation)
-    return calculate(number1, number2, operation)
+    result = calculate(number1, number2, operation)
+    return result
 print(run_calculator())
