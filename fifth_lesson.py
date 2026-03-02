@@ -1,15 +1,12 @@
-
 def greet(name):
     return f"Hello, {name}"
 
 print(greet("Danielo"))
 
 def is_even(number):
-    if number % 2 == 0:
-        return True
-    else:
-        return False
-def calculate(a,b,operation):
+    return number % 2 == 0
+
+def calculate(a, b, operation):
     if operation == "+":
         return a + b
     elif operation == "-":
@@ -17,8 +14,16 @@ def calculate(a,b,operation):
     elif operation == "*":
         return a * b
     elif operation == "/":
+        if b == 0:
+            return "Error"
         return a / b
-    return None
+    else:
+        return "Unknown operation"
 
-print(is_even(15))
-print(calculate(5,2,"*"))
+def run_calculator():
+    number1 = int(input("Enter a number: "))
+    number2 = int(input("Enter another number: "))
+    operation = input("Enter operation: ")
+    calculate(number1, number2, operation)
+    return calculate(number1, number2, operation)
+print(run_calculator())
